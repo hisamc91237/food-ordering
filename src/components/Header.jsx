@@ -1,6 +1,7 @@
 import React from 'react';
 import foodFireLogo from '../assets/foodFireLogo.png';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function Header() {
   const [loginBtn, setloginBtn] = useState('login');
@@ -13,10 +14,15 @@ function Header() {
         </div>
         <div className="nav-items">
           <ul>
-            <li>Home</li>
-            <li>Contact Us</li>
-            <li>About us</li>
-            <li>crate</li>
+            <li>
+              <Link to="">Home</Link>
+            </li>
+            <li>
+              <Link to="/contact">Contact U</Link>s
+            </li>
+            <li>
+              <Link to="/about">About us</Link>
+            </li>
             <button
               onClick={() => {
                 loginBtn === 'Login'
